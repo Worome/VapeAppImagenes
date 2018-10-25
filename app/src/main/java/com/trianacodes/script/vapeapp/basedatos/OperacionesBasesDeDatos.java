@@ -106,7 +106,7 @@ public final class OperacionesBasesDeDatos {
         valores.put(EstructuraBd.AROMA_MIN_MACERACION, aroma.getTiempoMinimoMaceracion());
         valores.put(EstructuraBd.AROMA_MAX_MACERACION, aroma.getTiempoMaximoMaceracion());
         valores.put(EstructuraBd.AROMA_OBSERVACIONES,aroma.getObservaciones());
-        valores.put(EstructuraBd.AROMA_VALORACION,aroma.getValoracion());
+//        valores.put(EstructuraBd.AROMA_VALORACION,aroma.getValoracion());
         valores.put(EstructuraBd.AROMA_IMAGEN,aroma.getImagen());
         //Inserto el registro
         db.insertOrThrow(EstructuraBd.TABLA_AROMA,null,valores);

@@ -141,6 +141,7 @@ public class AromaNuevoFragment extends android.support.v4.app.Fragment {
         valoracion = vista.findViewById(R.id.rbValoracion);
         btnImagen = vista.findViewById(R.id.btnImagen);
         btnNuevo = vista.findViewById(R.id.btnNuevo);
+        valoracion.setRating(0);
 
         if(validaPermisos()){
             btnImagen.setEnabled(true);
@@ -669,6 +670,7 @@ public class AromaNuevoFragment extends android.support.v4.app.Fragment {
                         //eNombre.setNextFocusForwardId(R.id.etNombre);
                         eNombre.requestFocus(R.id.etNombre);
 
+
                     } catch (Exception e) {
 
                     /* Guardo den el SharedPreferences los datos necesarios que hay que mostrar en el
@@ -1016,7 +1018,7 @@ public class AromaNuevoFragment extends android.support.v4.app.Fragment {
         protected Void doInBackground(Void... voids) {
 
             try{
-                Toast.makeText(getContext(),"en try Inserta",Toast.LENGTH_LONG).show();
+
                 operacionesDatos.getDb().beginTransaction();
                 operacionesDatos.insertarAroma(aroma);
                 operacionesDatos.getDb().setTransactionSuccessful();
